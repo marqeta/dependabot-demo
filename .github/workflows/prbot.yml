@@ -1,0 +1,18 @@
+name: PR bot GitHub APP
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, labeled, unlabeled, review_requested, review_request_removed, assigned, unassigned, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Invoke action
+        uses: marqeta/pr-bot-cli@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
