@@ -20,7 +20,6 @@ has_required_status_check if {
 }
 
 review["type"] := "APPROVE" if {
-    has_re_run_marker
     has_file_changed
     author_is_depandabot
     has_required_status_check
