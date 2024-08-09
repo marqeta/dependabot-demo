@@ -1,4 +1,4 @@
-package security.allow_security_checks
+package dependabot.auto_approve
 
 import data._utils.files.valid_file_change
 import future.keywords
