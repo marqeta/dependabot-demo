@@ -11,8 +11,8 @@ has_file_changed if {
     input.pull_request.changed_files != 0
 }
 
-author_is_depandabot if {
-    input.pull_request.user.login == "dependabot"
+author_is_dependabot if {
+    input.pull_request.user.login == "dependabot[bot]"
 }
 
 has_required_status_check if {
@@ -21,7 +21,7 @@ has_required_status_check if {
 
 review["type"] := "APPROVE" if {
     has_file_changed
-    author_is_depandabot
+    author_is_dependabot
     has_required_status_check
 }
 
