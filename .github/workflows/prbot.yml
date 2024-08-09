@@ -2,7 +2,8 @@ name: PR bot GitHub APP
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, edited, labeled, unlabeled, review_requested, review_request_removed, assigned, unassigned, synchronize]
+    branches:
+      - main
 
 jobs:
   build:
@@ -16,4 +17,3 @@ jobs:
         uses: marqeta/pr-bot-cli@main
         with:
           github-token: ${{ secrets.PR_BOT_TOKEN }}
-
