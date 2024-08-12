@@ -14,5 +14,7 @@ jobs:
 
       - name: Invoke action
         uses: marqeta/pr-bot-cli@main
+        with:
+          github_token: ${{ secrets.PR_BOT_TOKEN }}
         env:
           INPUT_GITHUB_TOKEN: ${{ secrets.PR_BOT_TOKEN }}
