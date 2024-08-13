@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened, edited, labeled, unlabeled, review_requested, review_request_removed, assigned, unassigned, synchronize]
 
 jobs:
-  build:
+  pr-bot:
     runs-on: ubuntu-latest
 
     steps:
