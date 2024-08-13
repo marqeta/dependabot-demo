@@ -2,10 +2,10 @@ name: PR bot GitHub APP
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, edited, labeled, unlabeled, review_requested, review_request_removed, assigned, unassigned, synchronize]
+    types: [opened, synchronize, reopened, edited, review_requested, review_request_removed, assigned, unassigned, synchronize]
 
 jobs:
-  build:
+  pr-bot:
     runs-on: ubuntu-latest
 
     steps:
