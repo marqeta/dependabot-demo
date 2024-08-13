@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Invoke action
+      - name: Run PR-Bot
         uses: marqeta/pr-bot-cli@main
         with:
           github_token: ${{ secrets.PR_BOT_TOKEN }}
